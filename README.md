@@ -194,3 +194,12 @@ Pass a 2-to-4 digit CPV prefix such as `["72"]` (IT services) or `["45"]` (const
 npm run typecheck && npm run lint && npm test && npm run build
 apify run --purge
 ```
+
+
+---
+
+## Related Actors by mrWolf
+
+- **[SAM.gov US Federal Contracts & Grants + MCP](https://apify.com/mr.wolf/us-sam-tenders-mcp-server)** — Keyless US federal contract opportunities, NAICS codes, and contracting officer contacts.
+- **[Tech & Startup Jobs Scraper (Greenhouse, Lever, Ashby, SmartRecruiters + MCP)](https://apify.com/mr.wolf/ats-jobs-mcp-server)** — Extract live tech jobs, salaries, and B2B hiring signals.
+- **[B2B Domain Intelligence & Email Verifier + MCP](https://apify.com/mr.wolf/domain-intel-mcp-server)** — Detect tech stack, DNS/MX/SPF/DMARC readiness, and company contacts.
