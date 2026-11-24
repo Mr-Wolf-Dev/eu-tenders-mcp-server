@@ -1,5 +1,7 @@
 # EU Public Tenders & Grants Monitor (TED Europa API + MCP Server)
 
+[![Mr-Wolf-Dev/eu-tenders-mcp-server MCP server](https://glama.ai/mcp/servers/Mr-Wolf-Dev/eu-tenders-mcp-server/badges/score.svg)](https://glama.ai/mcp/servers/Mr-Wolf-Dev/eu-tenders-mcp-server)
+
 Extract, filter, and normalize **active European public procurement notices**, **EU public tenders**, and **European grants** directly from **TED Europa** (Tenders Electronic Daily) — available both as a fast **HTTP-only Apify Actor** and as a **Standby MCP Server** for AI agents.
 
 Designed for **Pay-Per-Event (PPE)** cost efficiency with **zero headless browsers** (runs smoothly on **256 MB RAM**).
