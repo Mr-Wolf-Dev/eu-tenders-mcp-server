@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "apify": {
+      "url": "https://mcp.apify.com/"
+    },
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp"]
+    }
+  }
+}

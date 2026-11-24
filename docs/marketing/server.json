@@ -1,0 +1,28 @@
+{
+  "name": "eu-tenders-mcp-server",
+  "displayName": "EU Public Tenders & Grants Monitor (TED Europa)",
+  "version": "0.1.0",
+  "vendor": "mrWolf",
+  "description": "Streamable HTTP MCP server for extracting, filtering, and normalizing European public procurement tenders from TED Europa by country, CPV code, budget, and deadline.",
+  "homepage": "https://apify.com/mr.wolf/eu-tenders-mcp-server",
+  "transport": {
+    "type": "streamable-http",
+    "url": "https://mr-wolf-1--eu-tenders-mcp-server.apify.actor/mcp",
+    "authentication": {
+      "type": "bearer",
+      "header": "Authorization",
+      "prefix": "Bearer "
+    }
+  },
+  "tools": [
+    {
+      "name": "search_eu_tenders",
+      "description": "Search and filter European public procurement tenders (TED Europa) by country, CPV code, budget, publication window, and deadline."
+    },
+    {
+      "name": "get_tender_details",
+      "description": "Fetch normalized details for a specific TED Europa tender by publication ID."
+    }
+  ],
+  "categories": ["business", "government-data", "search", "lead-generation"]
+}

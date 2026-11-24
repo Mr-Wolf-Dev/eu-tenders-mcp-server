@@ -1,0 +1,57 @@
+{
+  "name": "EU Public Tenders Monitor (Apify TED Europa)",
+  "flow": [
+    {
+      "id": 1,
+      "module": "apify:runActor",
+      "version": 1,
+      "parameters": {},
+      "mapper": {
+        "actorId": "mr.wolf/eu-tenders-mcp-server",
+        "waitForFinish": 120,
+        "input": {
+          "countries": ["IT", "FR", "DE"],
+          "cpvCodes": ["72000000"],
+          "minBudget": 50000,
+          "maxItems": 25
+        }
+      }
+    },
+    {
+      "id": 2,
+      "module": "apify:getDatasetItems",
+      "version": 1,
+      "parameters": {},
+      "mapper": {
+        "datasetId": "{{1.defaultDatasetId}}",
+        "limit": 25
+      }
+    },
+    {
+      "id": 3,
+      "module": "builtin:BasicFeeder",
+      "version": 1,
+      "parameters": {},
+      "mapper": {
+        "array": "{{2.items}}"
+      }
+    },
+    {
+      "id": 4,
+      "module": "util:SetVariables",
+      "version": 1,
+      "parameters": {},
+      "mapper": {
+        "variables": [
+          {
+            "name": "tenderSummary",
+            "value": "[{{3.country}}] {{3.title}} | Buyer: {{3.buyerName}} | Value: {{3.estimatedValue}} {{3.currency}} | Deadline: {{3.submissionDeadline}} | {{3.documentUrl}}"
+          }
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "version": 1
+  }
+}

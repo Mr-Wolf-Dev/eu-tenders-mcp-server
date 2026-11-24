@@ -1,0 +1,93 @@
+{
+  "actorSpecification": 1,
+  "fields": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+      "tenderId": {
+        "type": "string",
+        "description": "Unique tender notice identifier (e.g. TED notice ID)."
+      },
+      "title": {
+        "type": "string",
+        "description": "Title of the public tender or grant."
+      },
+      "buyerName": {
+        "type": "string",
+        "description": "Name of the contracting authority / buyer."
+      },
+      "country": {
+        "type": "string",
+        "description": "ISO 3166-1 alpha-2 country code of the contracting authority."
+      },
+      "cpvCodes": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "Deduplicated list of Common Procurement Vocabulary (CPV) codes."
+      },
+      "estimatedValue": {
+        "type": ["number", "null"],
+        "description": "Estimated contract value, or null if omitted."
+      },
+      "currency": {
+        "type": ["string", "null"],
+        "description": "ISO 4217 currency code (e.g. EUR), or null if omitted."
+      },
+      "publicationDate": {
+        "type": "string",
+        "description": "Publication date in ISO 8601 format (YYYY-MM-DD)."
+      },
+      "submissionDeadline": {
+        "type": ["string", "null"],
+        "description": "Latest submission deadline in ISO 8601 format (YYYY-MM-DD), or null if omitted."
+      },
+      "documentUrl": {
+        "type": "string",
+        "description": "Canonical URL to the tender notice or documents."
+      }
+    },
+    "required": [
+      "tenderId",
+      "title",
+      "buyerName",
+      "country",
+      "cpvCodes",
+      "publicationDate",
+      "documentUrl"
+    ]
+  },
+  "views": {
+    "overview": {
+      "title": "Tenders Overview",
+      "transformation": {
+        "fields": [
+          "tenderId",
+          "title",
+          "buyerName",
+          "country",
+          "cpvCodes",
+          "estimatedValue",
+          "currency",
+          "submissionDeadline",
+          "documentUrl"
+        ]
+      },
+      "display": {
+        "component": "table",
+        "properties": {
+          "tenderId": { "label": "Tender ID", "format": "text" },
+          "title": { "label": "Title", "format": "text" },
+          "buyerName": { "label": "Buyer", "format": "text" },
+          "country": { "label": "Country", "format": "text" },
+          "cpvCodes": { "label": "CPV Codes", "format": "array" },
+          "estimatedValue": { "label": "Est. Value", "format": "number" },
+          "currency": { "label": "Currency", "format": "text" },
+          "submissionDeadline": { "label": "Deadline", "format": "date" },
+          "documentUrl": { "label": "URL", "format": "link" }
+        }
+      }
+    }
+  }
+}

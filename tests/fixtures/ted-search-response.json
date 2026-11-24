@@ -1,0 +1,131 @@
+{
+  "totalNoticeCount": 5,
+  "notices": [
+    {
+      "publication-number": "792483-2023",
+      "notice-title": {
+        "eng": "Italy – Energy and related services – Affidamento in concessione del servizio energia del Comune di Elmas",
+        "ita": "Italia – Servizi energetici – Affidamento in concessione del servizio energia del Comune di Elmas"
+      },
+      "buyer-name": {
+        "ita": ["Comune di Elmas"]
+      },
+      "buyer-country": ["ITA"],
+      "classification-cpv": [
+        "71314000",
+        "45316000",
+        "45315000",
+        "50232100",
+        "50232110",
+        "50720000",
+        "71314000",
+        "45316000"
+      ],
+      "estimated-value-glo": ["4500000"],
+      "estimated-value-cur-glo": ["EUR"],
+      "publication-date": "2023-12-28Z",
+      "deadline-receipt-tender-date-lot": ["2024-02-12+01:00"],
+      "links": {
+        "html": {
+          "ENG": "https://ted.europa.eu/en/notice/-/detail/792483-2023"
+        },
+        "xml": {
+          "MUL": "https://ted.europa.eu/en/notice/792483-2023/xml"
+        }
+      }
+    },
+    {
+      "publication-number": "48025-2024",
+      "notice-title": {
+        "eng": "Italy – Machine tools – PROCEDURA APERTA",
+        "ita": "Italia – Macchine utensili – PROCEDURA APERTA"
+      },
+      "buyer-name": {
+        "ita": ["Fondazione I.T.S. Campania Moda"]
+      },
+      "buyer-country": ["ITA"],
+      "classification-cpv": ["42600000", "42600000", "42600000"],
+      "estimated-value-glo": ["956000"],
+      "estimated-value-cur-glo": ["EUR"],
+      "publication-date": "2024-01-24Z",
+      "deadline-receipt-tender-date-lot": ["2024-02-19+01:00", "2024-02-26+01:00"],
+      "links": {
+        "html": {
+          "ENG": "https://ted.europa.eu/en/notice/-/detail/48025-2024"
+        },
+        "xml": {
+          "MUL": "https://ted.europa.eu/en/notice/48025-2024/xml"
+        }
+      }
+    },
+    {
+      "publication-number": "1-2025",
+      "notice-title": {
+        "hrv": "Hrvatska – Nadzor nad građenjem – Nacionalni park Plitvička jezera"
+      },
+      "buyer-name": {
+        "hrv": ["Javna ustanova Nacionalni park Plitvička jezera"]
+      },
+      "buyer-country": ["HRV"],
+      "classification-cpv": ["71247000", "71247000"],
+      "publication-date": "2025-01-02+01:00",
+      "deadline-receipt-tender-date-lot": ["2025-02-07+01:00"],
+      "links": {
+        "html": {
+          "ENG": "https://ted.europa.eu/en/notice/-/detail/1-2025"
+        },
+        "xml": {
+          "MUL": "https://ted.europa.eu/en/notice/1-2025/xml"
+        }
+      }
+    },
+    {
+      "publication-number": "50012-2024",
+      "notice-title": {
+        "eng": "France – Printing services – SERVICES D'IMPRESSION DE SUPPORTS DE COMMUNICATION POUR LA VILLE DU RAINCY",
+        "fra": "France – Services d'impression – SERVICES D'IMPRESSION DE SUPPORTS DE COMMUNICATION POUR LA VILLE DU RAINCY"
+      },
+      "buyer-name": {
+        "fra": ["Ville du Raincy"]
+      },
+      "buyer-country": ["FRA"],
+      "classification-cpv": ["79800000"],
+      "estimated-value-glo": ["800000"],
+      "estimated-value-cur-glo": ["EUR"],
+      "publication-date": "2024-01-25Z",
+      "deadline-receipt-tender-date-lot": ["2024-03-15+01:00"],
+      "links": {
+        "html": {
+          "ENG": "https://ted.europa.eu/en/notice/-/detail/50012-2024"
+        },
+        "xml": {
+          "MUL": "https://ted.europa.eu/en/notice/50012-2024/xml"
+        }
+      }
+    },
+    {
+      "publication-number": "99001-2025",
+      "notice-title": {
+        "eng": "Germany – Software development services – Cloud Procurement Platform",
+        "deu": "Deutschland – Softwareentwicklung – Cloud-Beschaffungsplattform"
+      },
+      "buyer-name": {
+        "deu": ["Beschaffungsamt des Bundes"]
+      },
+      "buyer-country": ["DEU"],
+      "classification-cpv": ["72200000"],
+      "estimated-value-glo": ["250000"],
+      "estimated-value-cur-glo": ["EUR"],
+      "publication-date": "2025-03-10Z",
+      "deadline-receipt-tender-date-lot": ["2026-06-30+02:00"],
+      "links": {
+        "html": {
+          "ENG": "https://ted.europa.eu/en/notice/-/detail/99001-2025"
+        },
+        "xml": {
+          "MUL": "https://ted.europa.eu/en/notice/99001-2025/xml"
+        }
+      }
+    }
+  ]
+}

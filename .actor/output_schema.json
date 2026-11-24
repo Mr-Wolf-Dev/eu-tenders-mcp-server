@@ -1,0 +1,20 @@
+{
+  "actorOutputSchemaVersion": 1,
+  "title": "EU Public Tenders & Grants Monitor Output",
+  "description": "Normalized European public procurement tenders extracted from TED Europa.",
+  "type": "object",
+  "properties": {
+    "overview": {
+      "type": "string",
+      "title": "Tenders Overview",
+      "description": "Table view of extracted and normalized EU tenders.",
+      "template": "{{links.apiDefaultDatasetUrl}}/items?view=overview"
+    },
+    "dataset": {
+      "type": "string",
+      "title": "Full Tenders Dataset (JSON)",
+      "description": "Complete JSON dataset of normalized EU public tenders.",
+      "template": "{{links.apiDefaultDatasetUrl}}/items"
+    }
+  }
+}

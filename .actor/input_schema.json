@@ -1,0 +1,66 @@
+{
+  "title": "EU Public Tenders & Grants Monitor Input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "countries": {
+      "title": "Countries (ISO 3166-1 alpha-2 or alpha-3)",
+      "type": "array",
+      "description": "Filter tenders by country codes (e.g. IT, DE, FR).",
+      "editor": "stringList",
+      "prefill": ["IT", "DE", "FR"],
+      "default": []
+    },
+    "cpvCodes": {
+      "title": "CPV Codes",
+      "type": "array",
+      "description": "Filter tenders by Common Procurement Vocabulary (CPV) codes (e.g. 72000000).",
+      "editor": "stringList",
+      "default": []
+    },
+    "minBudget": {
+      "title": "Minimum Estimated Budget (EUR)",
+      "type": "integer",
+      "description": "Minimum estimated contract value in EUR.",
+      "minimum": 0
+    },
+    "maxBudget": {
+      "title": "Maximum Estimated Budget (EUR)",
+      "type": "integer",
+      "description": "Maximum estimated contract value in EUR.",
+      "minimum": 0
+    },
+    "publishedFrom": {
+      "title": "Published From (ISO 8601)",
+      "type": "string",
+      "description": "Only include tenders published on or after this ISO date (YYYY-MM-DD).",
+      "editor": "textfield"
+    },
+    "publishedTo": {
+      "title": "Published To (ISO 8601)",
+      "type": "string",
+      "description": "Only include tenders published on or before this ISO date (YYYY-MM-DD).",
+      "editor": "textfield"
+    },
+    "minDeadline": {
+      "title": "Minimum Submission Deadline (ISO 8601)",
+      "type": "string",
+      "description": "Only include tenders with submission deadline on or after this ISO date (YYYY-MM-DD).",
+      "editor": "textfield"
+    },
+    "maxDeadline": {
+      "title": "Maximum Submission Deadline (ISO 8601)",
+      "type": "string",
+      "description": "Only include tenders with submission deadline on or before this ISO date (YYYY-MM-DD).",
+      "editor": "textfield"
+    },
+    "maxItems": {
+      "title": "Maximum Items",
+      "type": "integer",
+      "description": "Maximum number of normalized tenders to return.",
+      "minimum": 1,
+      "prefill": 20,
+      "default": 50
+    }
+  }
+}

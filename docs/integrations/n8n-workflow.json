@@ -1,0 +1,118 @@
+{
+  "name": "EU Public Tenders Monitor (Apify TED Europa)",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "days",
+              "daysInterval": 1,
+              "triggerAtHour": 8
+            }
+          ]
+        }
+      },
+      "id": "schedule-trigger",
+      "name": "Daily Schedule Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [240, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.apify.com/v2/acts/mr.wolf~eu-tenders-mcp-server/run-sync-get-dataset-items",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"countries\": [\"IT\", \"DE\", \"FR\"],\n  \"cpvCodes\": [\"72000000\"],\n  \"minBudget\": 50000,\n  \"maxItems\": 25\n}",
+        "options": {}
+      },
+      "id": "apify-run-sync",
+      "name": "Fetch EU Tenders (Apify)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [480, 300]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "tender-id",
+              "name": "tenderId",
+              "value": "={{ $json.tenderId }}",
+              "type": "string"
+            },
+            {
+              "id": "title",
+              "name": "title",
+              "value": "={{ $json.title }}",
+              "type": "string"
+            },
+            {
+              "id": "buyer",
+              "name": "buyerName",
+              "value": "={{ $json.buyerName }}",
+              "type": "string"
+            },
+            {
+              "id": "budget",
+              "name": "estimatedValue",
+              "value": "={{ $json.estimatedValue }}",
+              "type": "number"
+            },
+            {
+              "id": "deadline",
+              "name": "submissionDeadline",
+              "value": "={{ $json.submissionDeadline }}",
+              "type": "string"
+            },
+            {
+              "id": "url",
+              "name": "documentUrl",
+              "value": "={{ $json.documentUrl }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "format-tender",
+      "name": "Format Tender Alert",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [720, 300]
+    }
+  ],
+  "connections": {
+    "Daily Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Fetch EU Tenders (Apify)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fetch EU Tenders (Apify)": {
+      "main": [
+        [
+          {
+            "node": "Format Tender Alert",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  }
+}
