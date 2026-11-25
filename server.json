@@ -1,0 +1,17 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.Mr-Wolf-Dev/eu-tenders-mcp-server",
+  "title": "EU Public Tenders & Grants Monitor (TED Europa + MCP Server)",
+  "description": "HTTP-only Apify Actor & Standby MCP Server that extracts, normalizes, and filters European public te",
+  "repository": {
+    "url": "https://github.com/Mr-Wolf-Dev/eu-tenders-mcp-server",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mr-wolf-1--eu-tenders-mcp-server.apify.actor/mcp"
+    }
+  ]
+}
