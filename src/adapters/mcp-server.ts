@@ -12,7 +12,7 @@ export interface McpServerDependencies {
   billing: BillingMeter;
 }
 
-function createConfiguredMcpServer(deps: McpServerDependencies): McpServer {
+export function createConfiguredMcpServer(deps: McpServerDependencies): McpServer {
   const server = new McpServer({
     name: 'eu-tenders-mcp-server',
     version: '0.1.0',
